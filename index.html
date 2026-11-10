@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Rural · Brasas y pastas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--carbon:#15100c;--hollin:#1f1812;--brasa:#e0622a;--crema:#f0e4d0;--arena:#b9a78d;--vino:#5a1d27;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--carbon);color:var(--crema);font:300 1.0625rem/1.65 var(--sans)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brasa);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1rem}
+p{margin:0 0 1rem;max-width:46ch;color:var(--arena)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.4rem}
+section{padding:5.5rem 0}
+.btn{display:inline-block;background:var(--brasa);color:#1a0e07;font-weight:500;text-decoration:none;padding:.9rem 1.8rem;border-radius:2px;border:0;font:500 1rem var(--sans);cursor:pointer}
+.btn:hover{background:#f07a43}
+.btn.ghost{background:none;color:var(--crema);border:1px solid var(--arena)}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:calc(.9rem + env(safe-area-inset-top,0px)) 1.4rem .9rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#15100ccc,transparent)}
+nav .logo img{height:46px;width:auto}
+nav a.r{font-size:.95rem;text-decoration:none;border-bottom:1px solid var(--brasa);padding-bottom:2px}
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:0 0 4.5rem;background:linear-gradient(#15100c55,#15100cf2 88%),url(img01.jpg) center/cover;position:relative}
+.hero h1{font-size:clamp(3.4rem,11vw,8rem);font-weight:500;animation:in 1.4s ease both}
+.hl{width:clamp(210px,38vw,380px);height:auto}.hero h1 span{display:block;font-style:italic;font-size:.4em;letter-spacing:.02em;color:var(--brasa);margin-top:.6rem}
+.hero p{font-size:1.2rem;color:var(--crema);margin:1.4rem 0 2rem}
+@keyframes in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+.split{display:grid;gap:3rem;grid-template-columns:1fr 1fr;align-items:center}
+.split.flip>:first-child{order:2}
+.ph{position:relative}
+.ph img{width:100%;height:auto}
+.ph .tag{position:absolute;left:-1rem;bottom:-1.2rem;width:44%;border:6px solid var(--carbon)}
+.wide img{width:100%;max-height:70vh;object-fit:cover}
+.band{background:var(--hollin)}
+.stat{font:italic 500 clamp(5rem,14vw,9rem)/.9 var(--serif);color:var(--brasa)}
+.quote{font:italic 500 clamp(1.5rem,3vw,2.1rem)/1.3 var(--serif);color:var(--crema);max-width:24ch}
+.res{background:linear-gradient(#15100cdd,#15100cf5),url(img02.jpg) center/cover;text-align:center}
+.res .wrap{max-width:640px}
+.res p{margin-inline:auto}
+form{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2rem;text-align:left}
+form .full{grid-column:1/-1}
+label{font-size:.9rem;color:var(--arena);display:grid;gap:.35rem}
+input,select{font:300 1rem var(--sans);color:var(--crema);background:#ffffff0f;border:1px solid #ffffff33;border-radius:2px;padding:.75rem;width:100%;color-scheme:dark}
+#st{min-height:1.5rem;font-size:.95rem;color:var(--arena);margin:.8rem 0 0;text-align:center;max-width:none}
+footer{padding:2.5rem 0 3rem;color:var(--arena);font-size:.9rem;border-top:1px solid #ffffff1a}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+@media (max-width:760px){section{padding:3.5rem 0}.split{grid-template-columns:1fr;gap:2.5rem}.split.flip>:first-child{order:0}form{grid-template-columns:1fr}.ph .tag{left:.5rem}}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.info h3{font-size:1.9rem;margin-bottom:1.2rem}
+.hrs{display:grid;gap:1.1rem;margin:0}
+.hrs dt{font-weight:500;color:var(--crema)}
+.hrs dd{margin:0;font:500 1.7rem var(--serif);color:var(--brasa)}
+.addr{font:500 1.7rem/1.2 var(--serif);color:var(--crema);margin-bottom:.4rem}
+@media (max-width:760px){.info{grid-template-columns:1fr;gap:2.5rem}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:280px;gap:.8rem;margin-top:2rem}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal img:first-child{grid-row:span 2}
+@media (max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:210px}.gal img:first-child{grid-column:1/-1;grid-row:span 1}}
+</style></head><body>
+<nav><a class="logo" href="#" aria-label="La Rural"><img src="img03.png" alt="La Rural" height="46"></a><a class="r" href="#reservar">Reservá tu mesa</a></nav>
+
+<header class="hero"><div class="wrap">
+<h1><img class="hl" src="img03.png" alt="La Rural"><span>Brasas y pastas</span></h1>
+<p>Fuego de leña, buena carne, pastas caseras y vino. Una mesa para quedarse.</p>
+<a class="btn" href="#reservar">Reservá tu mesa</a>
+</div></header>
+
+<section id="brasas"><div class="wrap split">
+<div><h2>Todo empieza en la brasa</h2>
+<p>Cortes que se sazonan a mano, con sal gruesa y sin apuro, y se cocinan sobre leña. Humo, punto justo y el tiempo que pide cada pieza.</p>
+<p>Del fuego salen las carnes; de la cocina, las pastas y los platos del día.</p></div>
+<div class="ph"><img src="img05.jpg" alt="El parrillero de La Rural junto a una tabla de tiras de asado" loading="lazy"><img class="tag" src="img06.jpg" alt="Sal cayendo sobre las tiras de asado" loading="lazy"></div>
+</div></section>
+
+<section class="band"><div class="wrap split flip">
+<div class="wide"><img src="img07.jpg" alt="Cazuela de arroz con mariscos y tomates cherry" loading="lazy"></div>
+<div><h2>Pastas y platos de cocina</h2>
+<p>Cazuelas calientes, mariscos, arroces y pastas con salsas de la casa. Para compartir al medio de la mesa o para pedir el tuyo.</p></div>
+</div></section>
+
+<section><div class="wrap split">
+<div><h2>Noches de brasas y vino</h2>
+<p>Con la cava a la vista, cada noche se arma alrededor del fuego y de una buena botella. Pedí un vino de la carta o dejate recomendar.</p>
+<p class="quote">Una copa, el fuego y una mesa larga.</p></div>
+<div class="ph"><img src="img08.jpg" alt="Brasas encendidas, Noches de brasas y vino" loading="lazy"></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<h2>Cocktail bar</h2>
+<p>Antes de la cena o después de la sobremesa: tragos de autor, clásicos y spritz bien fríos.</p>
+<div class="wide" style="margin-top:2rem"><img src="img09.jpg" alt="Spritz con naranja en la barra de La Rural" loading="lazy"></div>
+</div></section>
+
+<section><div class="wrap split">
+<div class="ph"><img src="img10.jpg" alt="11 años compartiendo historias" loading="lazy" style="width:100%;max-height:80vh;object-fit:cover"></div>
+<div><h2>Once años compartiendo historias</h2>
+<p>Once años de mesas llenas, cumpleaños, reencuentros y primeras citas. Gracias por ser parte de La Rural.</p></div>
+</div></section>
+
+<section class="band" id="mesas"><div class="wrap split flip">
+<div class="ph"><img src="img11.jpg" alt="Mesa larga con invitados en La Rural" loading="lazy"></div>
+<div><h2>Mesas largas, buena compañía</h2>
+<p>Cumpleaños, reencuentros y cenas con amigos. Si son varios, reservá con tiempo y armamos la mesa para todos.</p>
+<a class="btn ghost" href="#reservar">Reservá tu mesa</a></div>
+</div></section>
+
+<section id="video"><div class="wrap">
+<h2>Así se vive La Rural</h2>
+<div class="wide" style="margin-top:1.5rem"><video controls playsinline preload="metadata" poster="img12.jpg" style="width:100%;height:auto;display:block;background:#000" src="video.mp4"></video></div>
+</div></section>
+
+<section id="momentos"><div class="wrap"><h2>Momentos en La Rural</h2><p>Copas servidas, charlas largas y mesas llenas.</p><div class="gal"><img src="img14.jpg" alt="Vino rosé y blanco servidos en dos copas" loading="lazy"><img src="img15.jpg" alt="Pareja conversando en la mesa" loading="lazy"><img src="img16.jpg" alt="Comensal sonriendo en una mesa larga" loading="lazy"><img src="img17.jpg" alt="Comensal probando un vino blanco" loading="lazy"><img src="img18.jpg" alt="Entrada de La Rural con la cava al fondo" loading="lazy"></div></div></section>
+
+<section class="band" id="horarios"><div class="wrap info">
+<div><h3>Horarios</h3><dl class="hrs"><div><dt>Mediodía</dt><dd>11:00 a 15:30 hs</dd></div><div><dt>Noche</dt><dd>20:00 a 01:00 hs</dd></div></dl></div>
+<div><h3>Dónde estamos</h3><p class="addr">Bv. Dr. Arturo Frondizi 1700</p><p>Morteros, Córdoba</p><p>Llamanos o escribinos por WhatsApp al <a href="tel:+5493562515777">3562 515777</a></p><p>Mail: <a href="mailto:laruralbrasasypastas@hotmail.com">laruralbrasasypastas@hotmail.com</a></p>
+<a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Bv+Dr+Arturo+Frondizi+1700+Morteros+Cordoba" target="_blank" rel="noopener">Ver en el mapa</a></div>
+</div></section>
+
+<section class="res" id="reservar"><div class="wrap">
+<h2>Reservá tu mesa</h2>
+<p>Elegí día y hora (mediodía de 11:00 a 15:30, noche de 20:00 a 01:00). Te abrimos WhatsApp con tu pedido listo para enviar.</p>
+<form id="f">
+<label class="full">Nombre<input name="n" required autocomplete="name"></label>
+<label>Fecha<input name="d" type="date" required></label>
+<label>Hora<select name="h"><option>12:00</option><option>13:00</option><option>14:00</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option></select></label>
+<label class="full">Personas<input name="p" type="number" min="1" max="20" value="2" required></label>
+<button class="btn full" type="submit">Enviar por WhatsApp</button>
+</form>
+<p id="st" role="status"></p>
+</div></section>
+
+<footer><div class="wrap"><span>La Rural · Brasas y pastas · Bv. Dr. Arturo Frondizi 1700, Morteros</span><span><a href="https://www.instagram.com/laruralbrasasypastas" target="_blank" rel="noopener">Instagram @laruralbrasasypastas</a> · <a href="https://wa.me/5493562515777" target="_blank" rel="noopener">WhatsApp 3562 515777</a> · <a href="mailto:laruralbrasasypastas@hotmail.com">Mail</a></span></div></footer>
+
+<script>
+var WHATSAPP="5493562515777"; // número con código de país, sin + ni espacios. Ej: 5493511234567
+document.getElementById("f").addEventListener("submit",function(e){
+e.preventDefault();var f=e.target,s=document.getElementById("st");
+if(!WHATSAPP){s.textContent="Falta cargar el número de WhatsApp del local.";return}
+var t="Hola, quiero reservar una mesa a nombre de "+f.n.value+" para "+f.p.value+" personas el "+f.d.value+" a las "+f.h.value+".";
+window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t),"_blank","noopener");
+s.textContent="Listo, revisá WhatsApp para enviar tu reserva.";});
+</script></body></html>
